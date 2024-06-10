@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather & Currency Exchange</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+ <div class="header">
+  <h1>Weather and Excahnge Currency</h1>
+ </div>
+<div class="container">
+<section class="weather-1" >
+  <div>
+  <img src="Weather-icon.png" alt="" width="300px" height="300px">
+</div>
+<div class="city">
+    <label for="city-select">Choose a city:</label>
+    <select id="city-select">
+        <option value="">Select a city</option>
+        <option value="Paris">Paris</option>
+        <option value="New York">New York</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Sydney">Sydney</option>
+    </select>
+    <div id="weather">Please select a city to view the weather.</div>
+  </div>
+  </section>
+
+
+    <section class="weather-2" >
+      <div>
+        <img src="exchangeicon.png" alt="" width="300px" height="300px">
+      </div>
+      <form id="currencyForm">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+    
+        <label for="fromCurrency">From:</label>
+        <select id="fromCurrency" name="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <!-- Add more currencies as needed -->
+        </select>
+    
+        <label for="toCurrency">To:</label>
+        <select id="toCurrency" name="toCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="TRY">TL</option>
+            <!-- Add more currencies as needed -->
+        </select>
+    
+        <button type="button" onclick="convertCurrency()">Convert</button>
+    </form>
+    
+    </section>
+    <div>
+      <div id="result"></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <script src="convert.js"></script>
+  
+</body>
+</html>
